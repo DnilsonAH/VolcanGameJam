@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://cyxdq2bt4w2yi"]
+
+[ext_resource type="Texture2D" uid="uid://dc0gkjhb6sggt" path="res://Resources/Images/Fondos/Biblioteca-1280x720.jpeg" id="1_crth0"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchor_right = 1.1110001
+anchor_bottom = 1.1110001
+offset_right = 0.12792969
+offset_bottom = 0.07196045
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_crth0")
+stretch_mode = 5
