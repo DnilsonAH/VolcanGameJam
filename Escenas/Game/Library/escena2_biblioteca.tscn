@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://b5i621u1nubrv"]
 
 [ext_resource type="Texture2D" uid="uid://bty8r05pmqts2" path="res://Resources/Images/library/Fondo.jpg" id="1_5cuji"]
-[ext_resource type="PackedScene" uid="uid://dnhwdpnttghdm" path="res://Entities/labrary/libreros.tscn" id="2_5cuji"]
+[ext_resource type="PackedScene" uid="uid://dnhwdpnttghdm" path="res://Entities/assets_libreria/libreros.tscn" id="2_5cuji"]
 
 [node name="escena2_biblioteca" type="Node2D"]
 
