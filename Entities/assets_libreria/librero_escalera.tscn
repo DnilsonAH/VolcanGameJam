@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://ssphewcn2rys"]
+
+[ext_resource type="Texture2D" uid="uid://4kbcyn0oynjv" path="res://Resources/Images/library/bookcaseBooksLadder_S.png" id="1_pc6qb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_li1k4"]
+size = Vector2(141, 215)
+
+[node name="StaticBody2D" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_pc6qb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 71.5)
+shape = SubResource("RectangleShape2D_li1k4")
