@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bp50c20q11gdu"]
+
+[ext_resource type="Texture2D" uid="uid://bb8jp06fj0qtm" path="res://Resources/Images/library/floorCarpetSmall_N.png" id="1_oilp3"]
+
+[node name="StaticBody2D" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_oilp3")
