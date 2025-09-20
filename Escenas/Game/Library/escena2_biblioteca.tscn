@@ -10,60 +10,59 @@
 [node name="escena2_biblioteca" type="Node2D"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_left = -80.0
-offset_top = 444.0
-offset_right = 1200.0
-offset_bottom = 1164.0
+offset_top = -0.19506836
+offset_right = 1280.0
+offset_bottom = 719.80493
 rotation = -0.0006288505
 texture = ExtResource("1_5cuji")
 
 [node name="StaticBody2D" parent="." instance=ExtResource("2_5cuji")]
-position = Vector2(-10, 478)
+position = Vector2(70, 33.80493)
 
 [node name="StaticBody2D2" parent="." instance=ExtResource("2_5cuji")]
-position = Vector2(131, 478)
+position = Vector2(211, 33.80493)
 
 [node name="StaticBody2D3" parent="." instance=ExtResource("2_5cuji")]
-position = Vector2(272, 478)
+position = Vector2(352, 33.80493)
 
 [node name="StaticBody2D4" parent="." instance=ExtResource("2_5cuji")]
-position = Vector2(411, 478)
+position = Vector2(491, 33.80493)
 
 [node name="StaticBody2D6" parent="." instance=ExtResource("2_5cuji")]
-position = Vector2(553, 478)
+position = Vector2(633, 33.80493)
 
 [node name="StaticBody2D7" parent="." instance=ExtResource("3_npxsp")]
-position = Vector2(-10, 959)
+position = Vector2(70, 514.80493)
 
 [node name="StaticBody2D8" parent="." instance=ExtResource("3_npxsp")]
-position = Vector2(131, 959)
+position = Vector2(211, 514.80493)
 
 [node name="StaticBody2D9" parent="." instance=ExtResource("3_npxsp")]
-position = Vector2(273, 959)
+position = Vector2(353, 514.80493)
 
 [node name="StaticBody2D10" parent="." instance=ExtResource("3_npxsp")]
-position = Vector2(849, 956)
+position = Vector2(929, 511.80493)
 
 [node name="StaticBody2D11" parent="." instance=ExtResource("3_npxsp")]
-position = Vector2(990, 956)
+position = Vector2(1070, 511.80493)
 
 [node name="StaticBody2D12" parent="." instance=ExtResource("3_npxsp")]
-position = Vector2(1131, 956)
+position = Vector2(1211, 511.80493)
 
 [node name="StaticBody2D13" parent="." instance=ExtResource("4_yon75")]
-position = Vector2(695, 477)
+position = Vector2(775, 32.80493)
 
 [node name="libreros" parent="." instance=ExtResource("2_5cuji")]
-position = Vector2(837, 478)
+position = Vector2(917, 33.80493)
 
 [node name="libreros2" parent="." instance=ExtResource("2_5cuji")]
-position = Vector2(980, 478)
+position = Vector2(1060, 33.80493)
 
 [node name="libreros3" parent="." instance=ExtResource("2_5cuji")]
-position = Vector2(1122, 478)
+position = Vector2(1202, 33.80493)
 
 [node name="StaticBody2D5" parent="." instance=ExtResource("5_tcuki")]
-position = Vector2(-19, 549)
+position = Vector2(61, 104.80493)
 
 [node name="StaticBody2D14" parent="." instance=ExtResource("6_h82mi")]
-position = Vector2(1132, 550)
+position = Vector2(1212, 105.80493)
