@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://cyxdq2bt4w2yi"]
+[gd_scene load_steps=4 format=3 uid="uid://cyxdq2bt4w2yi"]
 
 [ext_resource type="Texture2D" uid="uid://dc0gkjhb6sggt" path="res://Resources/Images/Fondos/Biblioteca-1280x720.jpeg" id="1_crth0"]
+[ext_resource type="Script" uid="uid://cf2d36hfpjmec" path="res://Escenas/Scripts/menu.gd" id="1_nwg6e"]
 [ext_resource type="Texture2D" uid="uid://ca1xvsvwjj2kj" path="res://Resources/Images/Buttons/BotonMenu.png" id="2_ookjv"]
 
 [node name="Menu" type="Control"]
@@ -11,6 +12,7 @@ offset_right = -142.08008
 offset_bottom = -79.920044
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_nwg6e")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
@@ -19,7 +21,7 @@ offset_bottom = 40.0
 texture = ExtResource("1_crth0")
 stretch_mode = 5
 
-[node name="Button" type="Button" parent="."]
+[node name="Play" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
@@ -31,13 +33,13 @@ offset_bottom = -82.0
 grow_vertical = 2
 icon = ExtResource("2_ookjv")
 
-[node name="TextureRect" type="TextureRect" parent="Button"]
+[node name="TextureRect" type="TextureRect" parent="Play"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("2_ookjv")
 
-[node name="Label" type="Label" parent="Button"]
+[node name="Label" type="Label" parent="Play"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -53,7 +55,7 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 70
 text = "Play"
 
-[node name="Button2" type="Button" parent="."]
+[node name="Options" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
@@ -65,13 +67,13 @@ offset_bottom = 64.0
 grow_vertical = 2
 icon = ExtResource("2_ookjv")
 
-[node name="TextureRect" type="TextureRect" parent="Button2"]
+[node name="TextureRect" type="TextureRect" parent="Options"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("2_ookjv")
 
-[node name="Label" type="Label" parent="Button2"]
+[node name="Label" type="Label" parent="Options"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -87,7 +89,7 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 70
 text = "Options"
 
-[node name="Button3" type="Button" parent="."]
+[node name="Credits" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
@@ -99,13 +101,13 @@ offset_bottom = 210.0
 grow_vertical = 2
 icon = ExtResource("2_ookjv")
 
-[node name="TextureRect" type="TextureRect" parent="Button3"]
+[node name="TextureRect" type="TextureRect" parent="Credits"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("2_ookjv")
 
-[node name="Label" type="Label" parent="Button3"]
+[node name="Label" type="Label" parent="Credits"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -120,3 +122,42 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 70
 text = "Creditos"
+
+[node name="exit" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 873.0
+offset_top = 170.0
+offset_right = 1201.0
+offset_bottom = 298.0
+grow_vertical = 2
+icon = ExtResource("2_ookjv")
+
+[node name="TextureRect" type="TextureRect" parent="exit"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_ookjv")
+
+[node name="Label" type="Label" parent="exit"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -75.0
+offset_top = -48.0
+offset_right = 73.0
+offset_bottom = 48.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 70
+text = "Salir"
+
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="Credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]
