@@ -1,9 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://c1b40jsmuovtn"]
+[gd_scene load_steps=8 format=3 uid="uid://bdqwbq1vqoflo"]
 
-[ext_resource type="Script" uid="uid://8j1ce6fnviu6" path="res://Entities/Plataforma/PlayerMovementPlataformer.gd" id="1_a375d"]
-[ext_resource type="Texture2D" uid="uid://ouwatevaitnt" path="res://Resources/Sprites/PlayerVolcanGameJam.png" id="1_rcg68"]
+[ext_resource type="Texture2D" uid="uid://ouwatevaitnt" path="res://Resources/Sprites/PlayerVolcanGameJam.png" id="1_3b0wp"]
+[ext_resource type="Script" uid="uid://cy8f4e441g5d3" path="res://Entities/Player/Movement.gd" id="1_q22au"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_a375d"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q22au"]
 size = Vector2(42, 63)
 
 [sub_resource type="Animation" id="Animation_l4ym4"]
@@ -18,7 +18,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("1_rcg68")]
+"values": [ExtResource("1_3b0wp")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -69,7 +69,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("1_rcg68")]
+"values": [ExtResource("1_3b0wp")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -120,7 +120,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("1_rcg68")]
+"values": [ExtResource("1_3b0wp")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -154,41 +154,22 @@ _data = {
 &"Walk": SubResource("Animation_exw5w")
 }
 
-[sub_resource type="QuadMesh" id="QuadMesh_po8yy"]
+[node name="playerLibrary" type="CharacterBody2D"]
+script = ExtResource("1_q22au")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_exw5w"]
-size = Vector2(1262, 52)
-
-[node name="Node2D" type="Node2D"]
-
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-script = ExtResource("1_a375d")
-
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+[node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-1, 0)
-texture = ExtResource("1_rcg68")
+texture = ExtResource("1_3b0wp")
 hframes = 8
 frame = 1
 
-[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+[node name="Camera2D" type="Camera2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 0.5)
-shape = SubResource("RectangleShape2D_a375d")
+shape = SubResource("RectangleShape2D_q22au")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody2D"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 &"": SubResource("AnimationLibrary_kw7rh")
 }
-
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2(0, 74)
-
-[node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D"]
-position = Vector2(64.00002, 2)
-scale = Vector2(854.00006, 51.5)
-mesh = SubResource("QuadMesh_po8yy")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(4, 2)
-shape = SubResource("RectangleShape2D_exw5w")
