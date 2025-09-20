@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://6vmnqfiphaxo"]
+
+[node name="Cube" type="StaticBody2D"]
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
