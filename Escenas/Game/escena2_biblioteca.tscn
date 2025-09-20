@@ -1,38 +1,32 @@
 [gd_scene load_steps=3 format=3 uid="uid://b5i621u1nubrv"]
 
 [ext_resource type="Texture2D" uid="uid://bty8r05pmqts2" path="res://Resources/Images/library/Fondo.jpg" id="1_5cuji"]
-[ext_resource type="Texture2D" uid="uid://nec2p2umlm5f" path="res://Resources/Images/library/bookcaseBooks_S.png" id="2_8l0iy"]
+[ext_resource type="PackedScene" uid="uid://dnhwdpnttghdm" path="res://Entities/labrary/libreros.tscn" id="2_5cuji"]
 
 [node name="escena2_biblioteca" type="Node2D"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = -80.0
+offset_top = 444.0
+offset_right = 1200.0
+offset_bottom = 1164.0
 rotation = -0.0006288505
 texture = ExtResource("1_5cuji")
 
-[node name="BookcaseBooksS" type="Sprite2D" parent="."]
-position = Vector2(1207, -111)
-texture = ExtResource("2_8l0iy")
+[node name="StaticBody2D" parent="." instance=ExtResource("2_5cuji")]
+position = Vector2(-10, 478)
 
-[node name="BookcaseBooksS2" type="Sprite2D" parent="."]
-position = Vector2(1069, -112)
-texture = ExtResource("2_8l0iy")
+[node name="StaticBody2D2" parent="." instance=ExtResource("2_5cuji")]
+position = Vector2(131, 478)
 
-[node name="BookcaseBooksS3" type="Sprite2D" parent="."]
-position = Vector2(930, -112)
-texture = ExtResource("2_8l0iy")
+[node name="StaticBody2D3" parent="." instance=ExtResource("2_5cuji")]
+position = Vector2(272, 478)
 
-[node name="BookcaseBooksS7" type="Sprite2D" parent="."]
-position = Vector2(346, -112)
-texture = ExtResource("2_8l0iy")
+[node name="StaticBody2D4" parent="." instance=ExtResource("2_5cuji")]
+position = Vector2(1129, 479)
 
-[node name="BookcaseBooksS8" type="Sprite2D" parent="."]
-position = Vector2(209, -111.00001)
-rotation = 0.0048869113
-texture = ExtResource("2_8l0iy")
+[node name="StaticBody2D5" parent="." instance=ExtResource("2_5cuji")]
+position = Vector2(989, 479)
 
-[node name="BookcaseBooksS9" type="Sprite2D" parent="."]
-position = Vector2(72, -111)
-rotation = -0.0014724078
-texture = ExtResource("2_8l0iy")
+[node name="StaticBody2D6" parent="." instance=ExtResource("2_5cuji")]
+position = Vector2(848, 479)
