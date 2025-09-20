@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://c1b40jsmuovtn"]
 
-[ext_resource type="Script" uid="uid://8j1ce6fnviu6" path="res://Entities/PlayerMovementPlataformer.gd" id="1_a375d"]
+[ext_resource type="Script" uid="uid://8j1ce6fnviu6" path="res://Entities/Plataforma/PlayerMovementPlataformer.gd" id="1_a375d"]
 [ext_resource type="Texture2D" uid="uid://ouwatevaitnt" path="res://Resources/Sprites/PlayerVolcanGameJam.png" id="1_rcg68"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a375d"]
