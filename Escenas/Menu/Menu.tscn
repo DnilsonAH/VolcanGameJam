@@ -1,13 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://cyxdq2bt4w2yi"]
+[gd_scene load_steps=3 format=3 uid="uid://cyxdq2bt4w2yi"]
 
 [ext_resource type="Texture2D" uid="uid://dc0gkjhb6sggt" path="res://Resources/Images/Fondos/Biblioteca-1280x720.jpeg" id="1_crth0"]
+[ext_resource type="Texture2D" uid="uid://ca1xvsvwjj2kj" path="res://Resources/Images/Buttons/BotonMenu.png" id="2_ookjv"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
 anchor_right = 1.1110001
 anchor_bottom = 1.1110001
-offset_right = 0.12792969
-offset_bottom = 0.07196045
+offset_right = -142.08008
+offset_bottom = -79.920044
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -17,3 +18,105 @@ offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("1_crth0")
 stretch_mode = 5
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 100.0
+offset_top = -210.0
+offset_right = 428.0
+offset_bottom = -82.0
+grow_vertical = 2
+icon = ExtResource("2_ookjv")
+
+[node name="TextureRect" type="TextureRect" parent="Button"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_ookjv")
+
+[node name="Label" type="Label" parent="Button"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -70.5
+offset_top = -48.0
+offset_right = 70.5
+offset_bottom = 48.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 70
+text = "Play"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 100.0
+offset_top = -64.0
+offset_right = 428.0
+offset_bottom = 64.0
+grow_vertical = 2
+icon = ExtResource("2_ookjv")
+
+[node name="TextureRect" type="TextureRect" parent="Button2"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_ookjv")
+
+[node name="Label" type="Label" parent="Button2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -107.5
+offset_top = -48.0
+offset_right = 107.5
+offset_bottom = 48.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 70
+text = "Options"
+
+[node name="Button3" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 100.0
+offset_top = 82.0
+offset_right = 428.0
+offset_bottom = 210.0
+grow_vertical = 2
+icon = ExtResource("2_ookjv")
+
+[node name="TextureRect" type="TextureRect" parent="Button3"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_ookjv")
+
+[node name="Label" type="Label" parent="Button3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -107.5
+offset_top = -48.0
+offset_right = 107.5
+offset_bottom = 48.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 70
+text = "Creditos"
