@@ -166,6 +166,7 @@ frame = 1
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, -150)
+scale = Vector2(5, 5)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 0.5)
