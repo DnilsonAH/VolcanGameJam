@@ -1,6 +1,7 @@
-[gd_scene load_steps=13 format=3 uid="uid://b5i621u1nubrv"]
+[gd_scene load_steps=14 format=3 uid="uid://b5i621u1nubrv"]
 
 [ext_resource type="Texture2D" uid="uid://bty8r05pmqts2" path="res://Resources/Images/library/Fondo.jpg" id="1_5cuji"]
+[ext_resource type="Texture2D" uid="uid://58lreledsx56" path="res://Resources/Images/Fondos/fondo suelo.png" id="1_h82mi"]
 [ext_resource type="PackedScene" uid="uid://dnhwdpnttghdm" path="res://Entities/assets_libreria/libreros.tscn" id="2_5cuji"]
 [ext_resource type="PackedScene" uid="uid://7ix5hadamp7l" path="res://Entities/assets_libreria/librero_abajo.tscn" id="3_npxsp"]
 [ext_resource type="PackedScene" uid="uid://ssphewcn2rys" path="res://Entities/assets_libreria/librero_escalera.tscn" id="4_yon75"]
@@ -27,7 +28,7 @@ offset_left = -1280.0
 offset_top = 1.0
 offset_bottom = 721.0
 rotation = -0.0006288505
-texture = ExtResource("1_5cuji")
+texture = ExtResource("1_h82mi")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_top = -0.19506836
@@ -41,7 +42,7 @@ offset_left = 1280.0
 offset_right = 2560.0
 offset_bottom = 720.0
 rotation = -0.0006288505
-texture = ExtResource("1_5cuji")
+texture = ExtResource("1_h82mi")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(-1280, 721)
