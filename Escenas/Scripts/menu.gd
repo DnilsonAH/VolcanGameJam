@@ -8,9 +8,6 @@ var musica_de_gamplay = preload("res://Resources/Songs/Musica nostalgia 8 bit.mp
 func _on_play_pressed() -> void:
 	get_tree().change_scene_to_file("res://Escenas/Transiciones/Inicio/HistoriaInicio.tscn")
 
-func _on_options_pressed() -> void:
-	get_tree().change_scene_to_file("res://Escenas/Menu/Options.tscn")
-
 func _on_credits_pressed() -> void:
 	get_tree().change_scene_to_file("res://Escenas/Menu/Credits.tscn")
 
