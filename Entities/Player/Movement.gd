@@ -1,6 +1,8 @@
 extends CharacterBody2D
 
-const SPEED = 250.0
+
+const WALK_SPEED = 250.0
+const RUN_SPEED = 350.0
 #const JUMP_VELOCITY = -400.0
 
 @onready var animationPlayer = $AnimationPlayer
@@ -8,19 +10,25 @@ const SPEED = 250.0
 
 
 func _physics_process(delta: float) -> void:
+	
+	#velociadd
+	var current_speed = WALK_SPEED
+	if Input.is_action_pressed("shift_left"):
+		current_speed = RUN_SPEED
+	
 	# Movimiento horizontal
 	var direction_X := Input.get_axis("ui_left", "ui_right")
 	if direction_X:
-		velocity.x = direction_X * SPEED
+		velocity.x = direction_X * current_speed
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
+		velocity.x = move_toward(velocity.x, 0, current_speed)
 
 	# Movimiento vertical
 	var direction_Y := Input.get_axis("ui_up", "ui_down")
 	if direction_Y:
-		velocity.y = direction_Y * SPEED
+		velocity.y = direction_Y * current_speed
 	else:
-		velocity.y = move_toward(velocity.y, 0, SPEED)
+		velocity.y = move_toward(velocity.y, 0, current_speed)
 
 	# Animaciones
 	animations(direction_X, direction_Y)

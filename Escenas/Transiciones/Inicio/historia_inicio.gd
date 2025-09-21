@@ -3,14 +3,15 @@ extends Control
 var isEsceneRutes = [
 	"res://Resources/EscenasTrantitions/HistoriaInicial/escena1.png", 
 	"res://Resources/EscenasTrantitions/HistoriaInicial/escena2.png",
-    "res://Resources/EscenasTrantitions/HistoriaInicial/escena3.png"
 ]
 
 @onready var isEscenes = $TextureEscena
 
 func _ready() -> void:
-	await show_image_sequence()
+	#await show_image_sequence()
 	
+	#isEscenes.texture = load(route)
+	await get_tree().create_timer(7.0).timeout
 
 func show_image_sequence():
 	for route in isEsceneRutes:
