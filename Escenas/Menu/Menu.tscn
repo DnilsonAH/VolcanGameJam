@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://cyxdq2bt4w2yi"]
+[gd_scene load_steps=5 format=3 uid="uid://cyxdq2bt4w2yi"]
 
 [ext_resource type="Texture2D" uid="uid://dc0gkjhb6sggt" path="res://Resources/Images/Fondos/Biblioteca-1280x720.jpeg" id="1_crth0"]
 [ext_resource type="Script" uid="uid://cf2d36hfpjmec" path="res://Escenas/Scripts/menu.gd" id="1_nwg6e"]
 [ext_resource type="Texture2D" uid="uid://ca1xvsvwjj2kj" path="res://Resources/Images/Buttons/BotonMenu.png" id="2_ookjv"]
+[ext_resource type="AudioStream" uid="uid://ce0wyq61n4ef" path="res://Resources/Songs/Musica nostalgia 8 bit.mp3" id="4_bhh0t"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -156,6 +157,10 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 70
 text = "Salir"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_bhh0t")
+volume_db = -30.0
 
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Options" to="." method="_on_options_pressed"]
