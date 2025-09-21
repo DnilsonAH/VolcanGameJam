@@ -136,8 +136,8 @@ _data = {
 }
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rn774"]
-radius = 33.0
-height = 134.0
+radius = 34.0
+height = 136.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qd03m"]
 radius = 33.0
@@ -160,10 +160,10 @@ hframes = 4
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-visible = false
 position = Vector2(18, -21)
 shape = SubResource("CapsuleShape2D_rn774")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(18, -21)
 shape = SubResource("CapsuleShape2D_qd03m")

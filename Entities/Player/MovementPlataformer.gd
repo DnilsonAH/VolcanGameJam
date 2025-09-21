@@ -3,10 +3,11 @@ extends CharacterBody2D
 const WALK_SPEED = 200.0
 const RUN_SPEED = 350
 const JUMP_VELOCITY = -450.0
+
 var Hearts = 3
 var is_damaged = false
 var is_dead = false
-var is_touching_dañino := false  # ✅ evita daño repetido mientras está encima
+var is_touching_dañino := false
 
 @onready var animationHeart = $Corazones/AnimationPlayer
 @onready var animationPlayer = $AnimationPlayer
@@ -14,6 +15,7 @@ var is_touching_dañino := false  # ✅ evita daño repetido mientras está enci
 @onready var hurtBox = $Area2D
 
 func _ready():
+	add_to_group("player")
 	if hurtBox:
 		hurtBox.body_entered.connect(_on_hurt_area_body_entered)
 		hurtBox.area_entered.connect(_on_hurt_area_area_entered)
@@ -103,7 +105,18 @@ func die():
 	heart(0)
 
 	await get_tree().create_timer(1.5).timeout
-	get_tree().reload_current_scene()
+
+	var game = get_node_or_null("/root/GAME")
+	if game == null:
+		print("⚠ No se encontró el nodo GAME.")
+		return
+
+	global_position = game.get_respawn_position()
+	Hearts = 3
+	is_dead = false
+	is_damaged = false
+	heart(Hearts)
+	animationPlayer.play("Idle")
 
 # Corazones visuales
 func heart(num):
