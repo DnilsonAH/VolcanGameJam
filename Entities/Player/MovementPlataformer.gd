@@ -43,9 +43,12 @@ func _physics_process(delta: float) -> void:
 		sprite2D.flip_h = false
 	elif direction == -1:
 		sprite2D.flip_h = true
+		
+		
 func _ready():
 	if hurtBox:
 		hurtBox.body_entered.connect(_on_hurt_area_body_entered)
+		hurtBox.area_entered.connect(_on_hurt_area_area_entered)
 	else:
 		print("⚠️ Nodo HurtArea2D no encontrado.")
 
@@ -74,9 +77,10 @@ func _on_hurt_area_body_entered(body):
 	if body.is_in_group("dañino"):
 		damage()
 
-
-
-
+# Nueva función para detectar colisiones con áreas
+func _on_hurt_area_area_entered(area):
+	if area.is_in_group("dañino"):
+		damage()
 
 func damage():
 	if is_damaged:

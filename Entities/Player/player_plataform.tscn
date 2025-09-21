@@ -261,7 +261,7 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_noteb"]
-size = Vector2(42, 15.333332)
+size = Vector2(42.666668, 63.333336)
 
 [node name="PlayerPlataform" type="CharacterBody2D" groups=["player"]]
 scale = Vector2(1.5, 1.5)
@@ -289,6 +289,5 @@ libraries = {
 [node name="Area2D" type="Area2D" parent="." groups=["player"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" groups=["player"]]
-position = Vector2(0, 24.333334)
+position = Vector2(9.536743e-07, 0.9999997)
 shape = SubResource("RectangleShape2D_noteb")
-disabled = true
