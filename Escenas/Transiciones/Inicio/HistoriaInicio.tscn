@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://pvnn0gcopkax"]
 
 [ext_resource type="Script" uid="uid://c17har8rajugk" path="res://Escenas/Transiciones/Inicio/historia_inicio.gd" id="1_tn0yn"]
-[ext_resource type="VideoStream" uid="uid://c5hqmdoanhfeo" path="res://Resources/EscenasTrantitions/VideoInicio.ogv" id="2_rsmr6"]
+[ext_resource type="VideoStream" uid="uid://ck62oc5n8n5lf" path="res://Resources/EscenasTrantitions/VideoInicio.ogv" id="2_rsmr6"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_rsmr6"]
 
