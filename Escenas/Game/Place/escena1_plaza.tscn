@@ -2815,7 +2815,7 @@ tile_size = Vector2i(400, 450)
 sources/0 = SubResource("TileSetAtlasSource_7mumm")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7mumm"]
-size = Vector2(1544, 376)
+size = Vector2(45.333496, 376)
 
 [node name="Escena1-Plaza" type="Node2D" groups=["plaza"]]
 scale = Vector2(1.5, 1.5)
@@ -2844,7 +2844,7 @@ tile_map_data = PackedByteArray("AAD//wsAAAAAAAAAAAD+/wsAAAAAAAAAAAD9/wsAAAAAAAA
 [node name="siguiente" type="Area2D" parent="." groups=["plaza"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="siguiente"]
-position = Vector2(1630, 192.66667)
+position = Vector2(2258.6667, 192.66667)
 shape = SubResource("RectangleShape2D_7mumm")
 
 [connection signal="area_entered" from="siguiente" to="." method="_on_siguiente_area_entered"]
