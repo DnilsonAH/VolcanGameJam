@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://cnxuy0myr6cup"]
+[gd_scene load_steps=5 format=3 uid="uid://cnxuy0myr6cup"]
 
 [ext_resource type="Script" uid="uid://3xlhuyiidl5j" path="res://Escenas/Scripts/options.gd" id="1_af1di"]
 [ext_resource type="Texture2D" uid="uid://dc0gkjhb6sggt" path="res://Resources/Images/Fondos/Biblioteca-1280x720.jpeg" id="2_r6cjf"]
 [ext_resource type="Texture2D" uid="uid://ca1xvsvwjj2kj" path="res://Resources/Images/Buttons/BotonMenu.png" id="3_lmlaf"]
+[ext_resource type="AudioStream" uid="uid://53kq771b2oxn" path="res://Resources/Songs/Mamá no me quiero casar  (Cover).mp3" id="4_r6cjf"]
 
 [node name="Menu_Credits" type="Control"]
 layout_mode = 3
@@ -73,5 +74,9 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 70
 text = "Regresar"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_r6cjf")
+volume_db = -30.0
 
 [connection signal="pressed" from="regresar" to="." method="_on_regresar_pressed"]
