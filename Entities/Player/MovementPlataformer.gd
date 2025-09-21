@@ -1,9 +1,9 @@
 extends CharacterBody2D
 
 
-const WALK_SPEED = 250.0
-const RUN_SPEED = 500
-const JUMP_VELOCITY = -350.0
+const WALK_SPEED = 200.0
+const RUN_SPEED = 350
+const JUMP_VELOCITY = -450.0
 
 @onready var animationPlayer= $AnimationPlayer
 
