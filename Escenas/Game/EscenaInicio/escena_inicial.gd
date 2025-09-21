@@ -15,6 +15,5 @@ func _process(delta: float) -> void:
 		_cambiar_escena()
 
 func _cambiar_escena() -> void:
-	# En lugar de cambiar directamente a escena1_plaza, cambiamos a game.tscn
 	# que ya tiene la lógica para manejar las transiciones
 	get_tree().change_scene_to_file("res://Escenas/Main/game.tscn")
