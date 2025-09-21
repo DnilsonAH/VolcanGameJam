@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://b5i621u1nubrv"]
+[gd_scene load_steps=16 format=3 uid="uid://b5i621u1nubrv"]
 
 [ext_resource type="Texture2D" uid="uid://bty8r05pmqts2" path="res://Resources/Images/library/Fondo.jpg" id="1_5cuji"]
 [ext_resource type="Texture2D" uid="uid://58lreledsx56" path="res://Resources/Images/Fondos/fondo suelo.png" id="1_h82mi"]
@@ -24,12 +24,6 @@ size = Vector2(13, 189)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h82mi"]
 size = Vector2(42, 63)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_tisep"]
-size = Vector2(20, 184)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_6weah"]
-size = Vector2(14, 184)
 
 [node name="escena2_biblioteca" type="Node2D"]
 script = ExtResource("1_ht0lp")
@@ -154,19 +148,5 @@ offset_right = 2562.0
 offset_bottom = -1.0
 color = Color(0, 0, 0, 1)
 
-[node name="derecha" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="derecha"]
-position = Vector2(1264, 415)
-shape = SubResource("RectangleShape2D_tisep")
-
-[node name="StaticBody2D" type="StaticBody2D" parent="derecha/CollisionShape2D"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="derecha/CollisionShape2D/StaticBody2D"]
-position = Vector2(3, 0)
-shape = SubResource("RectangleShape2D_6weah")
-
 [connection signal="area_entered" from="Izquierda" to="." method="_on_izquierda_area_entered"]
 [connection signal="body_entered" from="Izquierda" to="." method="_on_izquierda_body_entered"]
-[connection signal="area_entered" from="derecha" to="." method="_on_derecha_area_entered"]
-[connection signal="body_entered" from="derecha" to="." method="_on_derecha_body_entered"]
