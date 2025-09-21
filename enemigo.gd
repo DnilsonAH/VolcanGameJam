@@ -21,7 +21,7 @@ func _physics_process(delta: float) -> void:
 		var direction = (player.global_position - global_position).normalized()
 		self.velocity = direction * SPEED
 		sprite2D.flip_h = direction.x < 0
-		animationEnemy.play("Walk")
+		animationEnemy.play("fly")
 		move_and_slide()
 		#var collision = move_and_collide(velocity * delta)
 		#if collision:
