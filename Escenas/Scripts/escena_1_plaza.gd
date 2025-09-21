@@ -6,7 +6,6 @@ func _ready() -> void:
 	pass # Replace with function body.
 
 
-
 func _on_siguiente_area_entered(area: Area2D) -> void:
 	if area.is_in_group("player"):
 		var game = get_tree().get_nodes_in_group("GAME")[0]

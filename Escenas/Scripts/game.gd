@@ -8,8 +8,8 @@ var siguiente_nivel : String = ""
 # ✅ Solo preload de PackedScene (sin instantiate aquí)
 var mundo1_scene = preload("res://Escenas/Game/Place/escena1_plaza.tscn")
 var mundo2_scene = preload("res://Escenas/Game/Library/escena2_biblioteca.tscn")
-var mundo3_scene = preload("res://Escenas/Game/Library/derecha.tscn")
-var mundo4_scene = preload("res://Escenas/Game/Library/izquierda.tscn")
+var mundo3_scene = preload("res://Escenas/Game/LevelCampo/LevelCampo.tscn")
+var mundo4_scene = preload("res://Escenas/Game/Library/derecha.tscn")
 
 func _ready():
 	add_to_group("GAME") # 👈 importante para que escena1_plaza lo encuentre
@@ -29,6 +29,12 @@ func _siguiente_nivel():
 		"mundo2":
 			nivel = mundo2_scene.instantiate()
 			nivel.add_to_group("escena2_biblioteca")
+		"mundo3":
+			nivel = mundo3_scene.instantiate()
+			nivel.add_to_group("escena_derecha")
+		"mundo4":
+			nivel = mundo4_scene.instantiate()
+			nivel.add_to_group("escena_izquierda")
 		_:
 			print("⚠ Nivel no reconocido: ", siguiente_nivel)
 			return
