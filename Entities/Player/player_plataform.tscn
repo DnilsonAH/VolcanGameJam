@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://b7pyfp6hvu4j3"]
+[gd_scene load_steps=9 format=3 uid="uid://b7pyfp6hvu4j3"]
 
 [ext_resource type="Texture2D" uid="uid://ouwatevaitnt" path="res://Resources/Sprites/PlayerVolcanGameJam.png" id="1_ayort"]
 [ext_resource type="Script" uid="uid://8j1ce6fnviu6" path="res://Entities/Player/MovementPlataformer.gd" id="1_qp32o"]
@@ -154,7 +154,10 @@ _data = {
 &"Walk": SubResource("Animation_exw5w")
 }
 
-[node name="PlayerPlataform" type="CharacterBody2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_noteb"]
+size = Vector2(42, 15.333332)
+
+[node name="PlayerPlataform" type="CharacterBody2D" groups=["player"]]
 scale = Vector2(1.5, 1.5)
 script = ExtResource("1_qp32o")
 
@@ -176,3 +179,10 @@ shape = SubResource("RectangleShape2D_qp32o")
 libraries = {
 &"": SubResource("AnimationLibrary_kw7rh")
 }
+
+[node name="Area2D" type="Area2D" parent="." groups=["player"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" groups=["player"]]
+position = Vector2(0, 24.333334)
+shape = SubResource("RectangleShape2D_noteb")
+disabled = true

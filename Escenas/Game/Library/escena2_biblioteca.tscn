@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://b5i621u1nubrv"]
+[gd_scene load_steps=13 format=3 uid="uid://b5i621u1nubrv"]
 
 [ext_resource type="Texture2D" uid="uid://bty8r05pmqts2" path="res://Resources/Images/library/Fondo.jpg" id="1_5cuji"]
 [ext_resource type="PackedScene" uid="uid://dnhwdpnttghdm" path="res://Entities/assets_libreria/libreros.tscn" id="2_5cuji"]
@@ -7,8 +7,27 @@
 [ext_resource type="PackedScene" uid="uid://lbuech4l4tmg" path="res://Entities/assets_libreria/estante_izq.tscn" id="5_tcuki"]
 [ext_resource type="PackedScene" uid="uid://b3tuoetkm8ub8" path="res://Entities/assets_libreria/estante_der.tscn" id="6_h82mi"]
 [ext_resource type="PackedScene" uid="uid://bp50c20q11gdu" path="res://Entities/assets_libreria/alfombra.tscn" id="7_yon75"]
+[ext_resource type="PackedScene" uid="uid://bdqwbq1vqoflo" path="res://Entities/Player/player_library.tscn" id="8_tcuki"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_tcuki"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ht0lp"]
+size = Vector2(3842, 33)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tcuki"]
+size = Vector2(20, 189)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h82mi"]
+size = Vector2(42, 63)
 
 [node name="escena2_biblioteca" type="Node2D"]
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+offset_left = -1280.0
+offset_top = 1.0
+offset_bottom = 721.0
+rotation = -0.0006288505
+texture = ExtResource("1_5cuji")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_top = -0.19506836
@@ -17,56 +36,102 @@ offset_bottom = 719.80493
 rotation = -0.0006288505
 texture = ExtResource("1_5cuji")
 
-[node name="StaticBody2D" parent="." instance=ExtResource("2_5cuji")]
+[node name="TextureRect2" type="TextureRect" parent="."]
+offset_left = 1280.0
+offset_right = 2560.0
+offset_bottom = 720.0
+rotation = -0.0006288505
+texture = ExtResource("1_5cuji")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(-1280, 721)
+physics_material_override = SubResource("PhysicsMaterial_tcuki")
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D"]
+offset_right = 3842.0
+offset_bottom = 321.0
+color = Color(0, 0, 0, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1921, 16.5)
+shape = SubResource("RectangleShape2D_ht0lp")
+
+[node name="objetos" type="Node2D" parent="."]
+
+[node name="StaticBody2D" parent="objetos" instance=ExtResource("2_5cuji")]
 position = Vector2(70, 33.80493)
 
-[node name="StaticBody2D2" parent="." instance=ExtResource("2_5cuji")]
+[node name="StaticBody2D2" parent="objetos" instance=ExtResource("2_5cuji")]
 position = Vector2(211, 33.80493)
 
-[node name="StaticBody2D3" parent="." instance=ExtResource("2_5cuji")]
+[node name="StaticBody2D3" parent="objetos" instance=ExtResource("2_5cuji")]
 position = Vector2(352, 33.80493)
 
-[node name="StaticBody2D4" parent="." instance=ExtResource("2_5cuji")]
+[node name="StaticBody2D4" parent="objetos" instance=ExtResource("2_5cuji")]
 position = Vector2(491, 33.80493)
 
-[node name="StaticBody2D6" parent="." instance=ExtResource("2_5cuji")]
+[node name="StaticBody2D6" parent="objetos" instance=ExtResource("2_5cuji")]
 position = Vector2(633, 33.80493)
 
-[node name="StaticBody2D7" parent="." instance=ExtResource("3_npxsp")]
+[node name="StaticBody2D7" parent="objetos" instance=ExtResource("3_npxsp")]
 position = Vector2(70, 514.80493)
 
-[node name="StaticBody2D8" parent="." instance=ExtResource("3_npxsp")]
+[node name="StaticBody2D8" parent="objetos" instance=ExtResource("3_npxsp")]
 position = Vector2(211, 514.80493)
 
-[node name="StaticBody2D9" parent="." instance=ExtResource("3_npxsp")]
+[node name="StaticBody2D9" parent="objetos" instance=ExtResource("3_npxsp")]
 position = Vector2(353, 514.80493)
 
-[node name="StaticBody2D10" parent="." instance=ExtResource("3_npxsp")]
+[node name="StaticBody2D10" parent="objetos" instance=ExtResource("3_npxsp")]
 position = Vector2(929, 511.80493)
 
-[node name="StaticBody2D11" parent="." instance=ExtResource("3_npxsp")]
+[node name="StaticBody2D11" parent="objetos" instance=ExtResource("3_npxsp")]
 position = Vector2(1070, 511.80493)
 
-[node name="StaticBody2D12" parent="." instance=ExtResource("3_npxsp")]
+[node name="StaticBody2D12" parent="objetos" instance=ExtResource("3_npxsp")]
 position = Vector2(1211, 511.80493)
 
-[node name="StaticBody2D13" parent="." instance=ExtResource("4_yon75")]
+[node name="StaticBody2D13" parent="objetos" instance=ExtResource("4_yon75")]
 position = Vector2(775, 32.80493)
 
-[node name="libreros" parent="." instance=ExtResource("2_5cuji")]
+[node name="libreros" parent="objetos" instance=ExtResource("2_5cuji")]
 position = Vector2(917, 33.80493)
 
-[node name="libreros2" parent="." instance=ExtResource("2_5cuji")]
+[node name="libreros2" parent="objetos" instance=ExtResource("2_5cuji")]
 position = Vector2(1060, 33.80493)
 
-[node name="libreros3" parent="." instance=ExtResource("2_5cuji")]
+[node name="libreros3" parent="objetos" instance=ExtResource("2_5cuji")]
 position = Vector2(1202, 33.80493)
 
-[node name="StaticBody2D5" parent="." instance=ExtResource("5_tcuki")]
+[node name="StaticBody2D5" parent="objetos" instance=ExtResource("5_tcuki")]
 position = Vector2(61, 104.80493)
 
-[node name="StaticBody2D14" parent="." instance=ExtResource("6_h82mi")]
+[node name="StaticBody2D14" parent="objetos" instance=ExtResource("6_h82mi")]
 position = Vector2(1212, 105.80493)
 
-[node name="StaticBody2D15" parent="." instance=ExtResource("7_yon75")]
-position = Vector2(637, 242)
+[node name="StaticBody2D15" parent="objetos" instance=ExtResource("7_yon75")]
+position = Vector2(637, 277)
+
+[node name="Izquierda" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Izquierda"]
+position = Vector2(1, 415.5)
+shape = SubResource("RectangleShape2D_tcuki")
+
+[node name="player" type="Node2D" parent="."]
+
+[node name="playerLibrary" parent="player" instance=ExtResource("8_tcuki")]
+position = Vector2(639, 683)
+
+[node name="Area2D" type="Area2D" parent="player"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player/Area2D"]
+position = Vector2(639, 683.5)
+shape = SubResource("RectangleShape2D_h82mi")
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+offset_left = -1280.0
+offset_top = -322.0
+offset_right = 2562.0
+offset_bottom = -1.0
+color = Color(0, 0, 0, 1)
