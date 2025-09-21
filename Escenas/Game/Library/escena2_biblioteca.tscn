@@ -96,7 +96,7 @@ position = Vector2(61, 104.80493)
 position = Vector2(1212, 105.80493)
 
 [node name="StaticBody2D15" parent="objetos" instance=ExtResource("7_yon75")]
-position = Vector2(635, 248)
+position = Vector2(637, 277)
 
 [node name="Izquierda" type="Area2D" parent="."]
 
