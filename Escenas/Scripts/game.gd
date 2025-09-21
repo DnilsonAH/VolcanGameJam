@@ -8,6 +8,8 @@ var siguiente_nivel : String = ""
 # ✅ Solo preload de PackedScene (sin instantiate aquí)
 var mundo1_scene = preload("res://Escenas/Game/Place/escena1_plaza.tscn")
 var mundo2_scene = preload("res://Escenas/Game/Library/escena2_biblioteca.tscn")
+var mundo3_scene = preload("res://Escenas/Game/Library/derecha.tscn")
+var mundo4_scene = preload("res://Escenas/Game/Library/izquierda.tscn")
 
 func _ready():
 	add_to_group("GAME") # 👈 importante para que escena1_plaza lo encuentre
