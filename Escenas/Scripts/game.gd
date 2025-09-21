@@ -1,9 +1,9 @@
 extends Node2D
 
-@onready var GAME = $"."
 @onready var animacion = $AnimationPlayer
 
 var siguiente_nivel : String = ""
+var escena_actual = null
 
 # ✅ Solo preload de PackedScene (sin instantiate aquí)
 var mundo1_scene = preload("res://Escenas/Game/Place/escena1_plaza.tscn")
@@ -15,12 +15,27 @@ func _ready():
 	add_to_group("GAME") # 👈 importante para que escena1_plaza lo encuentre
 	var mundo1 = mundo1_scene.instantiate()
 	mundo1.add_to_group("escena1_plaza")
-	GAME.add_child(mundo1)
+	escena_actual = mundo1
+	self.add_child(mundo1)
+
 
 func _verificar_nivel():
-	animacion.play("saliendo")
+	print("Verificando nivel: ", siguiente_nivel)
+	# Asegúrate de que la animación existe antes de reproducirla
+	if animacion:
+		animacion.play("saliendo")
+	else:
+		print("Error: No se encontró el AnimationPlayer")
+		_siguiente_nivel()  # Si no hay animación, pasar directamente al siguiente nivel
 
 func _siguiente_nivel():
+	print("Cambiando al nivel: ", siguiente_nivel)
+	
+	# Eliminar la escena actual si existe
+	if escena_actual != null:
+		escena_actual.queue_free()
+		escena_actual = null
+	
 	var nivel
 	match siguiente_nivel:
 		"mundo1":
@@ -39,10 +54,14 @@ func _siguiente_nivel():
 			print("⚠ Nivel no reconocido: ", siguiente_nivel)
 			return
 	
-	GAME.add_child(nivel)
+	escena_actual = nivel
+	self.add_child(nivel)
+	print("Nivel cambiado exitosamente")
+
 
 func _on_animation_player_animation_finished(anim_name: StringName) -> void:
+	print("Animación terminada: ", anim_name)
 	if anim_name == "saliendo":
 		animacion.play("entrando")
-	elif anim_name == "entrando": # 👈 corregido
+	elif anim_name == "entrando":
 		_siguiente_nivel()
