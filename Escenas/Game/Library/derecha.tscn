@@ -1,0 +1,257 @@
+[gd_scene load_steps=14 format=3 uid="uid://vctwp8rq88i1"]
+
+[ext_resource type="Texture2D" uid="uid://bty8r05pmqts2" path="res://Resources/Images/library/Fondo.jpg" id="1_42hwa"]
+[ext_resource type="PackedScene" uid="uid://dnhwdpnttghdm" path="res://Entities/assets_libreria/libreros.tscn" id="2_17fer"]
+[ext_resource type="PackedScene" uid="uid://7ix5hadamp7l" path="res://Entities/assets_libreria/librero_abajo.tscn" id="3_5jdbi"]
+[ext_resource type="PackedScene" uid="uid://ssphewcn2rys" path="res://Entities/assets_libreria/librero_escalera.tscn" id="4_l3ror"]
+[ext_resource type="PackedScene" uid="uid://lbuech4l4tmg" path="res://Entities/assets_libreria/estante_izq.tscn" id="5_4lp84"]
+[ext_resource type="PackedScene" uid="uid://b3tuoetkm8ub8" path="res://Entities/assets_libreria/estante_der.tscn" id="6_a0lqs"]
+[ext_resource type="PackedScene" uid="uid://bp50c20q11gdu" path="res://Entities/assets_libreria/alfombra.tscn" id="7_dq3hu"]
+[ext_resource type="PackedScene" uid="uid://bdqwbq1vqoflo" path="res://Entities/Player/player_library.tscn" id="8_17fer"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_s5fmi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d65ex"]
+size = Vector2(20, 2880)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5jdbi"]
+size = Vector2(20, 2884)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l3ror"]
+size = Vector2(3840, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4lp84"]
+size = Vector2(3840, 20)
+
+[node name="derecha" type="Node2D"]
+
+[node name="fondo" type="Node2D" parent="."]
+
+[node name="TextureRect4" type="TextureRect" parent="fondo"]
+offset_left = 1280.0
+offset_top = -720.0
+offset_right = 2560.0
+texture = ExtResource("1_42hwa")
+
+[node name="TextureRect3" type="TextureRect" parent="fondo"]
+offset_top = -720.0
+offset_right = 1280.0
+texture = ExtResource("1_42hwa")
+
+[node name="TextureRect" type="TextureRect" parent="fondo"]
+offset_left = 1280.0
+offset_right = 2560.0
+offset_bottom = 720.0
+texture = ExtResource("1_42hwa")
+
+[node name="TextureRect2" type="TextureRect" parent="fondo"]
+offset_left = -1280.0
+offset_bottom = 720.0
+texture = ExtResource("1_42hwa")
+
+[node name="objetos" type="Node2D" parent="fondo/TextureRect2"]
+
+[node name="StaticBody2D" parent="fondo/TextureRect2/objetos" instance=ExtResource("2_17fer")]
+position = Vector2(70, 33.80493)
+
+[node name="StaticBody2D2" parent="fondo/TextureRect2/objetos" instance=ExtResource("2_17fer")]
+position = Vector2(211, 33.80493)
+
+[node name="StaticBody2D3" parent="fondo/TextureRect2/objetos" instance=ExtResource("2_17fer")]
+position = Vector2(352, 33.80493)
+
+[node name="StaticBody2D4" parent="fondo/TextureRect2/objetos" instance=ExtResource("2_17fer")]
+position = Vector2(491, 33.80493)
+
+[node name="StaticBody2D6" parent="fondo/TextureRect2/objetos" instance=ExtResource("2_17fer")]
+position = Vector2(633, 33.80493)
+
+[node name="StaticBody2D7" parent="fondo/TextureRect2/objetos" instance=ExtResource("3_5jdbi")]
+position = Vector2(70, 514.80493)
+
+[node name="StaticBody2D8" parent="fondo/TextureRect2/objetos" instance=ExtResource("3_5jdbi")]
+position = Vector2(211, 514.80493)
+
+[node name="StaticBody2D9" parent="fondo/TextureRect2/objetos" instance=ExtResource("3_5jdbi")]
+position = Vector2(353, 514.80493)
+
+[node name="StaticBody2D10" parent="fondo/TextureRect2/objetos" instance=ExtResource("3_5jdbi")]
+position = Vector2(929, 511.80493)
+
+[node name="StaticBody2D11" parent="fondo/TextureRect2/objetos" instance=ExtResource("3_5jdbi")]
+position = Vector2(1070, 511.80493)
+
+[node name="StaticBody2D12" parent="fondo/TextureRect2/objetos" instance=ExtResource("3_5jdbi")]
+position = Vector2(1211, 511.80493)
+
+[node name="StaticBody2D13" parent="fondo/TextureRect2/objetos" instance=ExtResource("4_l3ror")]
+position = Vector2(775, 32.80493)
+
+[node name="libreros" parent="fondo/TextureRect2/objetos" instance=ExtResource("2_17fer")]
+position = Vector2(917, 33.80493)
+
+[node name="libreros2" parent="fondo/TextureRect2/objetos" instance=ExtResource("2_17fer")]
+position = Vector2(1060, 33.80493)
+
+[node name="libreros3" parent="fondo/TextureRect2/objetos" instance=ExtResource("2_17fer")]
+position = Vector2(1202, 33.80493)
+
+[node name="StaticBody2D5" parent="fondo/TextureRect2/objetos" instance=ExtResource("5_4lp84")]
+position = Vector2(61, 104.80493)
+
+[node name="StaticBody2D14" parent="fondo/TextureRect2/objetos" instance=ExtResource("6_a0lqs")]
+position = Vector2(1212, 105.80493)
+
+[node name="StaticBody2D15" parent="fondo/TextureRect2/objetos" instance=ExtResource("7_dq3hu")]
+position = Vector2(637, 277)
+
+[node name="TextureRect6" type="TextureRect" parent="fondo"]
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("1_42hwa")
+
+[node name="TextureRect5" type="TextureRect" parent="fondo"]
+offset_top = -1440.0
+offset_right = 1280.0
+offset_bottom = -720.0
+texture = ExtResource("1_42hwa")
+
+[node name="TextureRect" type="TextureRect" parent="fondo/TextureRect5"]
+layout_mode = 0
+offset_left = 1280.0
+offset_right = 2560.0
+offset_bottom = 720.0
+texture = ExtResource("1_42hwa")
+
+[node name="TextureRect8" type="TextureRect" parent="fondo"]
+offset_top = -2160.0
+offset_right = 1280.0
+offset_bottom = -1440.0
+texture = ExtResource("1_42hwa")
+
+[node name="TextureRect" type="TextureRect" parent="fondo/TextureRect8"]
+layout_mode = 0
+offset_left = 1280.0
+offset_right = 2560.0
+offset_bottom = 720.0
+texture = ExtResource("1_42hwa")
+
+[node name="TextureRect2" type="TextureRect" parent="fondo/TextureRect8"]
+layout_mode = 0
+offset_left = 1280.0
+offset_right = 2560.0
+offset_bottom = 720.0
+texture = ExtResource("1_42hwa")
+
+[node name="fondo negro" type="Node2D" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="fondo negro"]
+modulate = Color(0, 0, 0, 1)
+offset_left = -1282.0
+offset_top = -2160.0
+texture = SubResource("CanvasTexture_s5fmi")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="fondo negro/TextureRect"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fondo negro/TextureRect/StaticBody2D"]
+position = Vector2(1272, 1440)
+shape = SubResource("RectangleShape2D_d65ex")
+
+[node name="TextureRect3" type="TextureRect" parent="fondo negro"]
+modulate = Color(0, 0, 0, 1)
+offset_left = 2559.0
+offset_top = -2160.0
+offset_right = 3841.0
+offset_bottom = 1409.0
+texture = SubResource("CanvasTexture_s5fmi")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="fondo negro/TextureRect3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fondo negro/TextureRect3/StaticBody2D"]
+position = Vector2(10, 1442)
+shape = SubResource("RectangleShape2D_5jdbi")
+
+[node name="TextureRect4" type="TextureRect" parent="fondo negro"]
+modulate = Color(0, 0, 0, 1)
+offset_left = -1283.0
+offset_top = -2845.0
+offset_right = 3841.0
+offset_bottom = -2160.0
+texture = SubResource("CanvasTexture_s5fmi")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="fondo negro/TextureRect4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fondo negro/TextureRect4/StaticBody2D"]
+position = Vector2(3203, 675)
+shape = SubResource("RectangleShape2D_l3ror")
+
+[node name="TextureRect2" type="TextureRect" parent="fondo negro"]
+modulate = Color(0, 0, 0, 1)
+offset_left = -1282.0
+offset_top = 721.0
+offset_right = 3840.0
+offset_bottom = 1406.0
+texture = SubResource("CanvasTexture_s5fmi")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="fondo negro/TextureRect2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fondo negro/TextureRect2/StaticBody2D"]
+position = Vector2(3202, 6)
+shape = SubResource("RectangleShape2D_4lp84")
+
+[node name="playerLibrary" parent="." instance=ExtResource("8_17fer")]
+position = Vector2(27, 405)
+
+[node name="StaticBody2D" parent="." instance=ExtResource("3_5jdbi")]
+position = Vector2(71, 512)
+
+[node name="StaticBody2D2" parent="StaticBody2D" instance=ExtResource("3_5jdbi")]
+position = Vector2(141, 0)
+
+[node name="StaticBody2D2" parent="StaticBody2D/StaticBody2D2" instance=ExtResource("3_5jdbi")]
+position = Vector2(141, 0)
+
+[node name="StaticBody2D2" parent="StaticBody2D/StaticBody2D2/StaticBody2D2" instance=ExtResource("3_5jdbi")]
+position = Vector2(141, 0)
+
+[node name="StaticBody2D2" parent="StaticBody2D/StaticBody2D2/StaticBody2D2/StaticBody2D2" instance=ExtResource("3_5jdbi")]
+position = Vector2(141, 0)
+
+[node name="StaticBody2D2" parent="StaticBody2D/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2" instance=ExtResource("3_5jdbi")]
+position = Vector2(141, 0)
+
+[node name="StaticBody2D2" parent="StaticBody2D/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2" instance=ExtResource("3_5jdbi")]
+position = Vector2(141, 0)
+
+[node name="StaticBody2D2" parent="StaticBody2D/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2" instance=ExtResource("3_5jdbi")]
+position = Vector2(141, 0)
+
+[node name="StaticBody2D2" parent="StaticBody2D/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2" instance=ExtResource("3_5jdbi")]
+position = Vector2(141, 0)
+
+[node name="StaticBody2D2" parent="StaticBody2D/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2" instance=ExtResource("3_5jdbi")]
+position = Vector2(141, 0)
+
+[node name="StaticBody2D2" parent="StaticBody2D/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2" instance=ExtResource("3_5jdbi")]
+position = Vector2(141, 0)
+
+[node name="StaticBody2D2" parent="StaticBody2D/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2" instance=ExtResource("3_5jdbi")]
+position = Vector2(141, 0)
+
+[node name="StaticBody2D2" parent="StaticBody2D/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2" instance=ExtResource("3_5jdbi")]
+position = Vector2(141, 0)
+
+[node name="StaticBody2D2" parent="StaticBody2D/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2" instance=ExtResource("3_5jdbi")]
+position = Vector2(141, 0)
+
+[node name="StaticBody2D2" parent="StaticBody2D/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2" instance=ExtResource("3_5jdbi")]
+position = Vector2(141, 0)
+
+[node name="StaticBody2D2" parent="StaticBody2D/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2" instance=ExtResource("3_5jdbi")]
+position = Vector2(141, 0)
+
+[node name="StaticBody2D2" parent="StaticBody2D/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2" instance=ExtResource("3_5jdbi")]
+position = Vector2(141, 0)
+
+[node name="StaticBody2D2" parent="StaticBody2D/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2/StaticBody2D2" instance=ExtResource("3_5jdbi")]
+position = Vector2(141, 0)
