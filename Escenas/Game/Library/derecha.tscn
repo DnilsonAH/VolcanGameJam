@@ -224,9 +224,6 @@ texture = SubResource("CanvasTexture_s5fmi")
 position = Vector2(3202, 6)
 shape = SubResource("RectangleShape2D_4lp84")
 
-[node name="playerLibrary" parent="." instance=ExtResource("8_17fer")]
-position = Vector2(27, 405)
-
 [node name="StaticBody2D" parent="." instance=ExtResource("3_5jdbi")]
 position = Vector2(71, 512)
 
@@ -559,3 +556,6 @@ position = Vector2(2, 206)
 
 [node name="estante_costado7" parent="estante_costado11/estante_costado9/estante_costado8" instance=ExtResource("8_5jdbi")]
 position = Vector2(0, 104)
+
+[node name="playerLibrary" parent="." instance=ExtResource("8_17fer")]
+position = Vector2(27, 405)

@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://cy8f4e441g5d3" path="res://Entities/Player/Movement.gd" id="1_q22au"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q22au"]
-size = Vector2(42, 63)
+size = Vector2(42, 15)
 
 [sub_resource type="Animation" id="Animation_l4ym4"]
 resource_name = "Idle"
@@ -169,7 +169,7 @@ frame = 1
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 0.5)
+position = Vector2(0, 24.5)
 shape = SubResource("RectangleShape2D_q22au")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
