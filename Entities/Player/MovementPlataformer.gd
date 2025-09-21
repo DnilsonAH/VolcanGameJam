@@ -5,12 +5,13 @@ const WALK_SPEED = 200.0
 const RUN_SPEED = 350
 const JUMP_VELOCITY = -450.0
 var Hearts = 3
+var is_damaged = false
 
 const IsPincho = "res://Entities/DagameTileMap/pinchos_tile_map.tscn"
 
 @onready var animationPlayer= $AnimationPlayer
 @onready var sprite2D = $Sprite2D
-@onready var hurtBox = $HurtArea2D
+@onready var hurtBox = $Area2D
 
 func _physics_process(delta: float) -> void:
 	# Gravedad
@@ -43,10 +44,16 @@ func _physics_process(delta: float) -> void:
 	elif direction == -1:
 		sprite2D.flip_h = true
 func _ready():
-	hurtBox.body_entered.connect(_on_hurt_area_body_entered)
+	if hurtBox:
+		hurtBox.body_entered.connect(_on_hurt_area_body_entered)
+	else:
+		print("⚠️ Nodo HurtArea2D no encontrado.")
+
 
 #Animaciones
 func animations(direction):
+	if is_damaged:
+		return  # No reproducir otras animaciones mientras está dañado
 	if is_on_floor():
 		if direction == 0:
 			animationPlayer.play("Idle")
@@ -64,16 +71,26 @@ func animations(direction):
 #Interacciones
 #Daño si el personaje toca un objeto pincho
 func _on_hurt_area_body_entered(body):
-	if body is TileMap and body.scene_file_path == IsPincho:
+	if body.is_in_group("dañino"):
 		damage()
 
 
+
+
+
 func damage():
+	if is_damaged:
+		return
+	is_damaged = true
 	Hearts -= 1
 	animationPlayer.play("damage")
 	print("¡Daño recibido! Vidas restantes: ", Hearts)
+
 	if Hearts <= 0:
 		die()
+	else:
+		await get_tree().create_timer(0.5).timeout
+		is_damaged = false
 
 func die():
 	print("¡Has muerto!")
