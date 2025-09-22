@@ -1,0 +1,56 @@
+[gd_scene load_steps=6 format=3 uid="uid://bj3nj1jprkvb6"]
+
+[ext_resource type="Script" uid="uid://15bh51ltl5pp" path="res://UI/flashbacks/antes_biblioteca.gd" id="1_0b1f1"]
+[ext_resource type="Texture2D" uid="uid://vpdd2fd5c7b4" path="res://Assets/Fondos/antesBilioteca.png" id="1_urynw"]
+[ext_resource type="Texture2D" uid="uid://p3u1lnj5e4q7" path="res://Assets/Fondos/boton.png" id="2_myh6y"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_0b1f1"]
+font_size = 47
+font_color = Color(0.86036915, 0.8603692, 0.8603692, 1)
+outline_size = 15
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 170
+shadow_color = Color(0.9020422, 0.8194459, 0.9252238, 0)
+
+[sub_resource type="LabelSettings" id="LabelSettings_qyhwb"]
+font_size = 63
+font_color = Color(0.49803922, 0.29411766, 0.18431373, 1)
+
+[node name="AntesBiblioteca" type="CanvasLayer"]
+script = ExtResource("1_0b1f1")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1536.0
+offset_bottom = 1024.0
+scale = Vector2(0.8308958, 0.76658297)
+texture = ExtResource("1_urynw")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 242.0
+offset_top = 618.0
+offset_right = 1137.0
+offset_bottom = 683.0
+text = "Aqui faltan partes"
+label_settings = SubResource("LabelSettings_0b1f1")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+offset_left = 1024.0
+offset_top = 561.0
+offset_right = 1664.0
+offset_bottom = 964.0
+scale = Vector2(0.38269064, 0.38746995)
+icon = ExtResource("2_myh6y")
+flat = true
+
+[node name="Label" type="Label" parent="Button"]
+layout_mode = 0
+offset_left = 172.46306
+offset_top = 160.0124
+offset_right = 476.46307
+offset_bottom = 247.0124
+text = "Continuar"
+label_settings = SubResource("LabelSettings_qyhwb")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
