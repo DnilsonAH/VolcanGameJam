@@ -142,7 +142,7 @@ position = Vector2(372, 117)
 position = Vector2(537, 1)
 
 [node name="MarianoMelgar" parent="." instance=ExtResource("12_hwsc6")]
-position = Vector2(631, 355)
+position = Vector2(638, 357)
 
 [node name="player" type="Node2D" parent="."]
 
