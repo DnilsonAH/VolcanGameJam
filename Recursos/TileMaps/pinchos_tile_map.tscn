@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://c71e5q840p5nq"]
+
+[ext_resource type="Texture2D" uid="uid://rsedy4jr61j7" path="res://Assets/TileMaps/PinchosTileMap.png" id="1_j7d45"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fvvk4"]
+texture = ExtResource("1_j7d45")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, 11.969772, -1.9200473, -6.003186, 2.017265, -6.003186, 16, 12.142, 16, 16, -16, 16)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, -16, -12.185057, -1.9375534, 5.037638, 1.894496, 4.9515247, 16, -12.055887, 16, -16)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(16, -16, 12.185057, -16, -5.037638, -1.9375534, -4.9515247, 1.894496, 12.055887, 16, 16, 16)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, 16, -16, 13.648182, 0.13513184, 0.2702613, 14.188704, -16, 16, -16, 16, 16)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(16, 16, 16, 13.648182, -0.13513184, 0.2702613, -14.188704, -16, -16, -16, -16, 16)
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, -12.185057, -16, 5.037638, -1.9375534, 4.9515247, 1.894496, -12.055887, 16, -16, 16)
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, -16, -13.648182, 0.13513184, -0.2702613, 14.188704, 16, 16, 16, 16, -16)
+1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(16, -16, 16, -13.648182, -0.13513184, -0.2702613, -14.188704, 16, -16, 16, -16, -16)
+2:2/0 = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -0.8611336, -16, 0.904192, -7.965496, 7.879383, -0.99030495, 16, 0.99030495, 16, 10.075276, 5.7265463, 16, 0.99030495, 16, -1.0764189, 9.946106, -7.0182476, 0.8107834, -16, -1.081047, -16, -8.955801, -6.9321337)
+
+[sub_resource type="TileSet" id="TileSet_570w0"]
+tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 1
+sources/1 = SubResource("TileSetAtlasSource_fvvk4")
+
+[node name="PinchosTileMap" type="TileMapLayer" groups=["dañino"]]
+tile_set = SubResource("TileSet_570w0")

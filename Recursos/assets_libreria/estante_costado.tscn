@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bxhuqspi5gyn7"]
+
+[ext_resource type="Texture2D" uid="uid://dfiylrwm3th1f" path="res://Assets/Sprites/LibrarySprite/bookcaseBooks_W.png" id="1_7x0b1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qs4yo"]
+size = Vector2(78, 258)
+
+[node name="estante_costado" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_7x0b1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(22, 88)
+shape = SubResource("RectangleShape2D_qs4yo")

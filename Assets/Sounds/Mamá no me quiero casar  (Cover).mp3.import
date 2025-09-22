@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://53kq771b2oxn"
+path="res://.godot/imported/Mamá no me quiero casar  (Cover).mp3-a3a7c996e3f6fbfb19e33f7597a688de.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sounds/Mamá no me quiero casar  (Cover).mp3"
+dest_files=["res://.godot/imported/Mamá no me quiero casar  (Cover).mp3-a3a7c996e3f6fbfb19e33f7597a688de.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

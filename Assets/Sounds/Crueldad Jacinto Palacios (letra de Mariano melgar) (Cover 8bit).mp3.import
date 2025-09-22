@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ctiwem7752g0u"
+path="res://.godot/imported/Crueldad Jacinto Palacios (letra de Mariano melgar) (Cover 8bit).mp3-9e2cb7f5f8567c70cb5e00a46ae9753c.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sounds/Crueldad Jacinto Palacios (letra de Mariano melgar) (Cover 8bit).mp3"
+dest_files=["res://.godot/imported/Crueldad Jacinto Palacios (letra de Mariano melgar) (Cover 8bit).mp3-9e2cb7f5f8567c70cb5e00a46ae9753c.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
