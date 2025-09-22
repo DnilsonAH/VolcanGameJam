@@ -11,6 +11,7 @@ var mundo1_scene = preload("res://Escenes/PlaceEscene/escena1_plaza.tscn")
 var mundo2_scene = preload("res://Escenes/LibraryEscene/escena2_biblioteca.tscn")
 var mundo3_scene = preload("res://Escenes/CampoEscene/LevelCampo.tscn")
 var mundo4_scene = preload("res://Escenes/LibraryEscene/derecha.tscn")
+var flashback_scene = preload("res://UI/flashbacks/primer_flash_back.tscn")
 
 func get_respawn_position() -> Vector2:
 	return respawn_position
@@ -60,6 +61,9 @@ func _siguiente_nivel():
 		"mundo4":
 			nivel = mundo4_scene.instantiate()
 			nivel.add_to_group("escena_izquierda")
+		"flashback":
+			nivel = flashback_scene.instantiate()
+			nivel.add_to_group("flashback")
 		_:
 			print("⚠ Nivel no reconocido: ", siguiente_nivel)
 			return
