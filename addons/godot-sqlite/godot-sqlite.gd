@@ -1,14 +1,22 @@
-# ############################################################################ #
-# Copyright © 2019-2025 Piet Bronders & Jeroen De Geeter <piet.bronders@gmail.com>
-# Licensed under the MIT License.
-# See LICENSE in the project root for license information.
-# ############################################################################ #
-
 @tool
 extends EditorPlugin
 
-func _enter_tree():
+
+func _enable_plugin() -> void:
+	# Add autoloads here.
 	pass
 
-func _exit_tree():
+
+func _disable_plugin() -> void:
+	# Remove autoloads here.
+	pass
+
+
+func _enter_tree() -> void:
+	# Initialization of the plugin goes here.
+	pass
+
+
+func _exit_tree() -> void:
+	# Clean-up of the plugin goes here.
 	pass

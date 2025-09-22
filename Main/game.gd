@@ -1,7 +1,9 @@
 extends Node2D
 
+var db := preload("res://addons/godot-sqlite/godot-sqlite.gd").new()
+
 @onready var animacion: AnimationPlayer = $AnimationPlayer
-var db := SQLite.new()
+
 
 var siguiente_nivel: String = ""
 var escena_actual: Node = null
@@ -19,10 +21,13 @@ func get_respawn_position() -> Vector2:
 	return respawn_position
 
 func _ready():
-	add_to_group("GAME")
-	_inicializar_sqlite()
-	siguiente_nivel = "inicio"
-	_cargar_escena(siguiente_nivel)
+	db.path = "user://test.db"
+	db.open_db()
+	db.query("CREATE TABLE IF NOT EXISTS test (id INTEGER PRIMARY KEY, nombre TEXT);")
+	db.query("INSERT INTO test (nombre) VALUES ('Dnilson');")
+	var resultado = db.select_rows("SELECT * FROM test;")
+	print(resultado)
+
 
 func _inicializar_sqlite():
 	db.path = "user://datos_juego.db"
