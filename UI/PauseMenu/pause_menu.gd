@@ -20,6 +20,14 @@ func _ready():
 	btn_menu.pressed.connect(_on_menu_pressed)
 	btn_quit.pressed.connect(_on_quit_pressed)
 
+# 👇 Detectar tecla ESC
+func _unhandled_input(event):
+	if event.is_action_pressed("ui_cancel"):
+		if panel_menu.visible:
+			_on_resume_pressed() # si ya está abierto → cerrar
+		else:
+			_on_pause_pressed() # si está cerrado → abrir
+
 func _on_pause_pressed():
 	panel_menu.visible = true
 	get_tree().paused = true
