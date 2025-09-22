@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://b5i621u1nubrv"]
+[gd_scene load_steps=20 format=3 uid="uid://b5i621u1nubrv"]
 
 [ext_resource type="Texture2D" uid="uid://bty8r05pmqts2" path="res://Assets/Sprites/LibrarySprite/Fondo.jpg" id="1_5cuji"]
 [ext_resource type="Texture2D" uid="uid://58lreledsx56" path="res://Assets/Fondos/fondo suelo.png" id="1_h82mi"]
@@ -10,20 +10,22 @@
 [ext_resource type="PackedScene" uid="uid://h0ifnl2cuypp" path="res://Recursos/assets_libreria/estante_der.tscn" id="6_h82mi"]
 [ext_resource type="PackedScene" uid="uid://bp50c20q11gdu" path="res://Recursos/assets_libreria/alfombra.tscn" id="7_yon75"]
 [ext_resource type="PackedScene" uid="uid://bdqwbq1vqoflo" path="res://Characters/Player/player_rpg.tscn" id="8_tcuki"]
+[ext_resource type="PackedScene" uid="uid://cr8jmtyhoamgr" path="res://Recursos/assets_libreria/mesa_N.tscn" id="11_u16ba"]
+[ext_resource type="PackedScene" uid="uid://dxt1n52j1psob" path="res://Characters/Melgar/mariano_melgar.tscn" id="12_hwsc6"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_tcuki"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ht0lp"]
 size = Vector2(3842, 33)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h82mi"]
+size = Vector2(42, 63)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tcuki"]
 size = Vector2(20, 189)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3e27q"]
 size = Vector2(13, 189)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_h82mi"]
-size = Vector2(42, 63)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tisep"]
 size = Vector2(20, 184)
@@ -54,6 +56,13 @@ offset_right = 2560.0
 offset_bottom = 720.0
 rotation = -0.0006288505
 texture = ExtResource("1_h82mi")
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+offset_left = -1280.0
+offset_top = -322.0
+offset_right = 2562.0
+offset_bottom = -1.0
+color = Color(0, 0, 0, 1)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(-1280, 721)
@@ -124,17 +133,14 @@ position = Vector2(1212, 105.80493)
 [node name="StaticBody2D15" parent="objetos" instance=ExtResource("7_yon75")]
 position = Vector2(637, 277)
 
-[node name="Izquierda" type="Area2D" parent="."]
+[node name="StaticBody2D2" parent="." instance=ExtResource("11_u16ba")]
+position = Vector2(372, 117)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Izquierda"]
-position = Vector2(1, 415.5)
-shape = SubResource("RectangleShape2D_tcuki")
+[node name="StaticBody2D2" parent="StaticBody2D2" instance=ExtResource("11_u16ba")]
+position = Vector2(537, 1)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Izquierda"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Izquierda/StaticBody2D"]
-position = Vector2(-2.5, 415.5)
-shape = SubResource("RectangleShape2D_3e27q")
+[node name="MarianoMelgar" parent="." instance=ExtResource("12_hwsc6")]
+position = Vector2(631, 355)
 
 [node name="player" type="Node2D" parent="."]
 
@@ -147,12 +153,17 @@ position = Vector2(639, 683)
 position = Vector2(639, 683.5)
 shape = SubResource("RectangleShape2D_h82mi")
 
-[node name="ColorRect2" type="ColorRect" parent="."]
-offset_left = -1280.0
-offset_top = -322.0
-offset_right = 2562.0
-offset_bottom = -1.0
-color = Color(0, 0, 0, 1)
+[node name="Izquierda" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Izquierda"]
+position = Vector2(1, 415.5)
+shape = SubResource("RectangleShape2D_tcuki")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Izquierda"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Izquierda/StaticBody2D"]
+position = Vector2(-2.5, 415.5)
+shape = SubResource("RectangleShape2D_3e27q")
 
 [node name="derecha" type="Area2D" parent="."]
 
