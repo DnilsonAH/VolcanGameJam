@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://3xlhuyiidl5j" path="res://UI/Menu/options.gd" id="1_af1di"]
 [ext_resource type="Texture2D" uid="uid://dc0gkjhb6sggt" path="res://Assets/Fondos/Biblioteca-1280x720.jpeg" id="2_r6cjf"]
-[ext_resource type="Texture2D" uid="uid://ca1xvsvwjj2kj" path="res://Assets/Sprites/ButonSprite.png" id="3_lmlaf"]
+[ext_resource type="Texture2D" uid="uid://p3u1lnj5e4q7" path="res://Assets/Fondos/boton.png" id="3_l1vmm"]
 [ext_resource type="AudioStream" uid="uid://53kq771b2oxn" path="res://Assets/Sounds/Mamá no me quiero casar  (Cover).mp3" id="4_r6cjf"]
 [ext_resource type="Texture2D" uid="uid://noh7xjjeuey3" path="res://Assets/creditos/VolcanGameJam.jpg" id="5_l1vmm"]
 
@@ -47,19 +47,14 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = 941.0
-offset_top = -300.0
-offset_right = 1269.0
-offset_bottom = -172.0
+offset_left = 917.0
+offset_top = -317.0
+offset_right = 1557.0
+offset_bottom = 86.0
 grow_vertical = 2
-scale = Vector2(0.62627804, 0.5417009)
-icon = ExtResource("3_lmlaf")
-
-[node name="TextureRect" type="TextureRect" parent="regresar"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-texture = ExtResource("3_lmlaf")
+scale = Vector2(0.3843675, 0.362473)
+icon = ExtResource("3_l1vmm")
+flat = true
 
 [node name="Label" type="Label" parent="regresar"]
 layout_mode = 1
@@ -68,13 +63,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -107.0
-offset_top = -52.0
-offset_right = 110.0
-offset_bottom = 44.0
+offset_left = -145.68767
+offset_top = -63.5587
+offset_right = 156.31232
+offset_bottom = 71.441284
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 70
+theme_override_colors/font_color = Color(0.49803922, 0.29411766, 0.18431373, 1)
+theme_override_font_sizes/font_size = 99
 text = "Volver"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

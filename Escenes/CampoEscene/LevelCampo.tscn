@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://dh52wwodv3rht"]
+[gd_scene load_steps=13 format=4 uid="uid://dh52wwodv3rht"]
 
 [ext_resource type="Texture2D" uid="uid://cue0qjrrwlq3l" path="res://Assets/Fondos/misti.png" id="1_5ouoc"]
 [ext_resource type="Texture2D" uid="uid://d57rfs0v8kbn" path="res://Assets/Fondos/foza.png" id="2_7n48f"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://c71e5q840p5nq" path="res://Recursos/TileMaps/pinchos_tile_map.tscn" id="5_2fled"]
 [ext_resource type="PackedScene" uid="uid://cs6npjikdtdsy" path="res://Recursos/TileMaps/floor_jump.tscn" id="6_r8br1"]
 [ext_resource type="PackedScene" uid="uid://dlsvkylkwi36a" path="res://Characters/Enemies/Fantasma.tscn" id="7_7n48f"]
+[ext_resource type="PackedScene" uid="uid://rf8em5hfsiql" path="res://Recursos/TileMaps/BlockNull.tscn" id="8_fbwur"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ngyc5"]
 resource_name = "MistiFondo"
@@ -60,3 +61,6 @@ tile_map_data = PackedByteArray("AAAMAP//AQAAAAAAAAANAP//AQAAAAAAAAASAP//AQAAAAA
 
 [node name="Fantasma" parent="." instance=ExtResource("7_7n48f")]
 position = Vector2(-189, -226)
+
+[node name="BlockNull" parent="." instance=ExtResource("8_fbwur")]
+position = Vector2(-212, -73)

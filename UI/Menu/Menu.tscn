@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cf2d36hfpjmec" path="res://UI/Menu/menu.gd" id="1_nwg6e"]
 [ext_resource type="Texture2D" uid="uid://52htpxtphmtd" path="res://Assets/Fondos/Fondo Menu principal (1).png" id="2_bhh0t"]
-[ext_resource type="Texture2D" uid="uid://ca1xvsvwjj2kj" path="res://Assets/Sprites/ButonSprite.png" id="2_ookjv"]
+[ext_resource type="Texture2D" uid="uid://p3u1lnj5e4q7" path="res://Assets/Fondos/boton.png" id="3_8q0vi"]
 [ext_resource type="AudioStream" uid="uid://ce0wyq61n4ef" path="res://Assets/Sounds/Musica nostalgia 8 bit.mp3" id="4_bhh0t"]
 
 [sub_resource type="FontVariation" id="FontVariation_bhh0t"]
@@ -29,19 +29,14 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = 507.0
-offset_top = 74.0
-offset_right = 835.0
-offset_bottom = 202.0
+offset_left = 461.0
+offset_top = 33.0
+offset_right = 1101.0
+offset_bottom = 436.0
 grow_vertical = 2
-scale = Vector2(0.6958397, 0.64410585)
-icon = ExtResource("2_ookjv")
-
-[node name="TextureRect" type="TextureRect" parent="Play"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-texture = ExtResource("2_ookjv")
+scale = Vector2(0.45321527, 0.41496933)
+icon = ExtResource("3_8q0vi")
+flat = true
 
 [node name="Label" type="Label" parent="Play"]
 layout_mode = 1
@@ -50,14 +45,15 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -73.4619
-offset_top = -54.684765
-offset_right = 67.5381
-offset_bottom = 41.31523
+offset_left = -112.59308
+offset_top = -76.18953
+offset_right = 122.40695
+offset_bottom = 84.81052
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/font_color = Color(0.49647135, 0.29296303, 0.18503916, 1)
 theme_override_fonts/font = SubResource("FontVariation_bhh0t")
-theme_override_font_sizes/font_size = 70
+theme_override_font_sizes/font_size = 117
 text = "Play"
 
 [node name="Credits" type="Button" parent="."]
@@ -65,13 +61,14 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = 556.0
-offset_top = 176.0
-offset_right = 884.0
-offset_bottom = 304.0
+offset_left = 497.99997
+offset_top = 194.0
+offset_right = 1138.0
+offset_bottom = 597.0
 grow_vertical = 2
-scale = Vector2(0.37662545, 0.34821096)
-icon = ExtResource("2_ookjv")
+scale = Vector2(0.33815792, 0.3009118)
+icon = ExtResource("3_8q0vi")
+flat = true
 
 [node name="Label" type="Label" parent="Credits"]
 layout_mode = 1
@@ -80,13 +77,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -107.5
-offset_top = -48.0
-offset_right = 107.5
-offset_bottom = 48.0
+offset_left = -192.84044
+offset_top = -61.92447
+offset_right = 198.15955
+offset_bottom = 71.07553
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 70
+theme_override_colors/font_color = Color(0.49803922, 0.29411766, 0.18431373, 1)
+theme_override_font_sizes/font_size = 97
 text = "Creditos"
 
 [node name="exit" type="Button" parent="."]
@@ -94,19 +92,14 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = 568.0
-offset_top = 261.0
-offset_right = 896.0
-offset_bottom = 389.0
+offset_left = 1085.0
+offset_top = 244.0
+offset_right = 1725.0
+offset_bottom = 647.0
 grow_vertical = 2
-scale = Vector2(0.31059885, 0.2946038)
-icon = ExtResource("2_ookjv")
-
-[node name="TextureRect" type="TextureRect" parent="exit"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-texture = ExtResource("2_ookjv")
+scale = Vector2(0.24080595, 0.22704813)
+icon = ExtResource("3_8q0vi")
+flat = true
 
 [node name="Label" type="Label" parent="exit"]
 layout_mode = 1
@@ -115,13 +108,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -75.0
-offset_top = -48.0
-offset_right = 73.0
-offset_bottom = 48.0
+offset_left = -94.629074
+offset_top = -55.54117
+offset_right = 94.37091
+offset_bottom = 67.45883
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 70
+theme_override_colors/font_color = Color(0.49803922, 0.29411766, 0.18431373, 1)
+theme_override_font_sizes/font_size = 89
 text = "Salir"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
