@@ -17,6 +17,7 @@ func get_respawn_position() -> Vector2:
 
 func _ready():
 	add_to_group("GAME")
+	$CanvasLayer/ColorRect.visible = false   # 👈 arranca apagado
 	var mundo1 = mundo1_scene.instantiate()
 	mundo1.add_to_group("escena1_plaza")
 	escena_actual = mundo1
@@ -34,12 +35,9 @@ func _verificar_nivel():
 		print("⚠ No se ha definido el siguiente nivel.")
 		return
 
-	print("Verificando nivel: ", siguiente_nivel)
-	if animacion:
-		animacion.play("saliendo")
-	else:
-		print("⚠ No se encontró el AnimationPlayer.")
-		_siguiente_nivel()
+	var overlay = $CanvasLayer/ColorRect
+	overlay.visible = true    # 👈 se activa recién ahora
+	animacion.play("saliendo")
 
 func _siguiente_nivel():
 	print("Cambiando al nivel: ", siguiente_nivel)
@@ -79,8 +77,8 @@ func _siguiente_nivel():
 	print("✅ Nivel cambiado exitosamente.")
 
 func _on_animation_player_animation_finished(anim_name: StringName) -> void:
-	print("Animación terminada: ", anim_name)
 	if anim_name == "saliendo":
+		_siguiente_nivel()
 		animacion.play("entrando")
 	elif anim_name == "entrando":
-		_siguiente_nivel()
+		$CanvasLayer/ColorRect.visible = false   # 👈 ocultar otra vez
