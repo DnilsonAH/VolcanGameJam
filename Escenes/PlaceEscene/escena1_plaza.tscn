@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=4 uid="uid://bulud2erh8avi"]
+[gd_scene load_steps=12 format=4 uid="uid://bulud2erh8avi"]
 
 [ext_resource type="Script" uid="uid://ug83bmqbahps" path="res://Escenes/PlaceEscene/escena_1_plaza.gd" id="1_dj3v7"]
 [ext_resource type="Texture2D" uid="uid://ccmnbnix8uush" path="res://Assets/Fondos/Imagen de WhatsApp 2025-09-20 a las 17.59.05_422f3b9b.jpg" id="1_yhjhu"]
@@ -6,6 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://b2f0yfh6wrki4" path="res://Recursos/TileMaps/floor_campo.tscn" id="4_ou3qb"]
 [ext_resource type="PackedScene" uid="uid://rf8em5hfsiql" path="res://Recursos/TileMaps/BlockNull.tscn" id="5_dj3v7"]
 [ext_resource type="PackedScene" uid="uid://dxt1n52j1psob" path="res://Characters/Melgar/mariano_melgar.tscn" id="6_pvtei"]
+[ext_resource type="PackedScene" uid="uid://koswfjgqf3gx" path="res://Recursos/Objets/bloque_inivicible.tscn" id="7_b42sp"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_b42sp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7mumm"]
 texture = ExtResource("1_yhjhu")
@@ -2822,6 +2825,13 @@ size = Vector2(45.333496, 376)
 scale = Vector2(1.5, 1.5)
 script = ExtResource("1_dj3v7")
 
+[node name="FondoSuperiorNegro" type="TextureRect" parent="."]
+modulate = Color(0, 0, 0, 1)
+offset_left = -582.0
+offset_top = -137.33334
+offset_right = 1997.3335
+texture = SubResource("CanvasTexture_b42sp")
+
 [node name="BackGround" type="TileMapLayer" parent="."]
 position = Vector2(0, -0.6666667)
 tile_map_data = PackedByteArray("AAAAAAAAAAAAAAAAAAABAAAAAAABAAAAAAACAAAAAAACAAAAAAADAAAAAAADAAAAAAD//wAAAAABAAAAAAD+/wAAAAAAAAAAAAAEAAAAAAADAAAAAAAFAAAAAAADAAAAAAAGAAAAAAADAAAAAAA=")
@@ -2844,8 +2854,11 @@ tile_map_data = PackedByteArray("AAD//wsAAAAAAAAAAAD+/wsAAAAAAAAAAAD9/wsAAAAAAAA
 position = Vector2(-1049.3334, 2.0000002)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="siguiente"]
-position = Vector2(2258.6667, 192.66667)
+position = Vector2(2576.6667, 190.66667)
 shape = SubResource("RectangleShape2D_7mumm")
+
+[node name="bloqueInivicible" parent="." instance=ExtResource("7_b42sp")]
+position = Vector2(92, 412.66666)
 
 [connection signal="area_entered" from="siguiente" to="." method="_on_siguiente_area_entered"]
 [connection signal="body_entered" from="siguiente" to="." method="_on_siguiente_body_entered"]
