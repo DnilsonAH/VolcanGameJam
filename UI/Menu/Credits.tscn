@@ -44,41 +44,35 @@ vertical_alignment = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Panel"]
 layout_mode = 0
-offset_left = 38.0
-offset_top = 77.0
-offset_right = 586.0
-offset_bottom = 530.0
-text = "sfsdfsfd
-sdfsfd
-sdf
-sdf
-dfs
-fds
+offset_left = 35.0
+offset_top = 75.0
+offset_right = 583.0
+offset_bottom = 528.0
+focus_mode = 2
+text = "Equipo de desarrollo:
+
+Narrativa / Arte
+Nadia Torres  
+
+Arte y animación
+Beatriz  Coaquira 
+
+Programacion / Música
+Dnilson Achahuanco  
+
+Programación / Diseño de escenarios
+Deyson Flores
 
 
+Recursos externos:
+Poema original de Mariano Melgar (dominio público).
+Música generada con inteligencia artificial.
 
+                        --------------------SPECIAL THANKS-----------------------
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-fdssdfsdfsd"
+VolcanGameJam gracias por la oportunidad
+Gracias a todas las personas que hicieron posible este proyecto."
+selection_enabled = true
 
 [node name="regresar" type="Button" parent="."]
 layout_mode = 1
