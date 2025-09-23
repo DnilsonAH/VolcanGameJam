@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://rf8em5hfsiql"]
+
+[sub_resource type="TileSet" id="TileSet_clpdi"]
+tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 1
+
+[node name="BlockNull" type="TileMapLayer"]
+tile_set = SubResource("TileSet_clpdi")

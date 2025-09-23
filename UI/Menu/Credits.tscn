@@ -1,0 +1,89 @@
+[gd_scene load_steps=6 format=3 uid="uid://cnxuy0myr6cup"]
+
+[ext_resource type="Script" uid="uid://3xlhuyiidl5j" path="res://UI/Menu/options.gd" id="1_af1di"]
+[ext_resource type="Texture2D" uid="uid://dc0gkjhb6sggt" path="res://Assets/Fondos/Biblioteca-1280x720.jpeg" id="2_r6cjf"]
+[ext_resource type="Texture2D" uid="uid://p3u1lnj5e4q7" path="res://Assets/Fondos/boton.png" id="3_l1vmm"]
+[ext_resource type="AudioStream" uid="uid://53kq771b2oxn" path="res://Assets/Sounds/Mamá no me quiero casar  (Cover).mp3" id="4_r6cjf"]
+[ext_resource type="Texture2D" uid="uid://noh7xjjeuey3" path="res://Assets/creditos/VolcanGameJam.jpg" id="5_l1vmm"]
+
+[node name="Menu_Credits" type="Control"]
+layout_mode = 3
+anchor_right = 1.1110001
+anchor_bottom = 1.1110001
+offset_right = -142.08008
+offset_bottom = -79.920044
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_af1di")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_r6cjf")
+stretch_mode = 5
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 136.0
+offset_top = 53.0
+offset_right = 786.0
+offset_bottom = 678.0
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 26.0
+offset_right = 563.0
+offset_bottom = 75.0
+theme_override_font_sizes/font_size = 33
+text = " · · · · · · · · · · CREDITS · · · · · · · · · ·
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="regresar" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 917.0
+offset_top = -317.0
+offset_right = 1557.0
+offset_bottom = 86.0
+grow_vertical = 2
+scale = Vector2(0.3843675, 0.362473)
+icon = ExtResource("3_l1vmm")
+flat = true
+
+[node name="Label" type="Label" parent="regresar"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -145.68767
+offset_top = -63.5587
+offset_right = 156.31232
+offset_bottom = 71.441284
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.49803922, 0.29411766, 0.18431373, 1)
+theme_override_font_sizes/font_size = 99
+text = "Volver"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_r6cjf")
+volume_db = -30.0
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 949.99994
+offset_top = 491.00003
+offset_right = 2030.0
+offset_bottom = 1571.0
+scale = Vector2(0.16531359, 0.16059272)
+texture = ExtResource("5_l1vmm")
+
+[connection signal="pressed" from="regresar" to="." method="_on_regresar_pressed"]

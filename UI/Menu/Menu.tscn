@@ -1,0 +1,127 @@
+[gd_scene load_steps=6 format=3 uid="uid://cyxdq2bt4w2yi"]
+
+[ext_resource type="Script" uid="uid://cf2d36hfpjmec" path="res://UI/Menu/menu.gd" id="1_nwg6e"]
+[ext_resource type="Texture2D" uid="uid://52htpxtphmtd" path="res://Assets/Fondos/Fondo Menu principal (1).png" id="2_bhh0t"]
+[ext_resource type="Texture2D" uid="uid://p3u1lnj5e4q7" path="res://Assets/Fondos/boton.png" id="3_8q0vi"]
+[ext_resource type="AudioStream" uid="uid://ce0wyq61n4ef" path="res://Assets/Sounds/Musica nostalgia 8 bit.mp3" id="4_bhh0t"]
+
+[sub_resource type="FontVariation" id="FontVariation_bhh0t"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchor_right = 1.1110001
+anchor_bottom = 1.1110001
+offset_right = -142.08008
+offset_bottom = -79.920044
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nwg6e")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("2_bhh0t")
+stretch_mode = 5
+
+[node name="Play" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 475.00003
+offset_top = 31.0
+offset_right = 1115.0
+offset_bottom = 434.0
+grow_vertical = 2
+scale = Vector2(0.45321527, 0.41496933)
+icon = ExtResource("3_8q0vi")
+flat = true
+
+[node name="Label" type="Label" parent="Play"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -112.59308
+offset_top = -76.18953
+offset_right = 122.40695
+offset_bottom = 84.81052
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.49647135, 0.29296303, 0.18503916, 1)
+theme_override_fonts/font = SubResource("FontVariation_bhh0t")
+theme_override_font_sizes/font_size = 117
+text = "Play"
+
+[node name="Credits" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 515.0
+offset_top = 190.00006
+offset_right = 1155.0
+offset_bottom = 593.00006
+grow_vertical = 2
+scale = Vector2(0.33815792, 0.3009118)
+icon = ExtResource("3_8q0vi")
+flat = true
+
+[node name="Label" type="Label" parent="Credits"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -192.84044
+offset_top = -61.92447
+offset_right = 198.15955
+offset_bottom = 71.07553
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.49803922, 0.29411766, 0.18431373, 1)
+theme_override_font_sizes/font_size = 97
+text = "Creditos"
+
+[node name="exit" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 1085.0
+offset_top = 244.0
+offset_right = 1725.0
+offset_bottom = 647.0
+grow_vertical = 2
+scale = Vector2(0.24080595, 0.22704813)
+icon = ExtResource("3_8q0vi")
+flat = true
+
+[node name="Label" type="Label" parent="exit"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -94.629074
+offset_top = -55.54117
+offset_right = 94.37091
+offset_bottom = 67.45883
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.49803922, 0.29411766, 0.18431373, 1)
+theme_override_font_sizes/font_size = 89
+text = "Salir"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_bhh0t")
+volume_db = -30.0
+
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]

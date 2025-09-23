@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://rc37u8h5gki2"
+path="res://.godot/imported/Dialogo_Plaza.dialogue-0eb64279efaf06eedcbe34736c48e0d4.tres"
+
+[deps]
+
+source_file="res://dialogues/Dialogo_Plaza.dialogue"
+dest_files=["res://.godot/imported/Dialogo_Plaza.dialogue-0eb64279efaf06eedcbe34736c48e0d4.tres"]
+
+[params]
+
+defaults=true

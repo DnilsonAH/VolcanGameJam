@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://7ix5hadamp7l"]
+
+[ext_resource type="Texture2D" uid="uid://cldj7mo6vvjpt" path="res://Resources/Images/library/bookcaseBooks_N.png" id="1_v7de5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p0lrj"]
+size = Vector2(140, 213)
+
+[node name="StaticBody2D" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_v7de5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 101.5)
+shape = SubResource("RectangleShape2D_p0lrj")

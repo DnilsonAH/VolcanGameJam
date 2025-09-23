@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c5sq3nidt2u8n"
+path="res://.godot/imported/Daño por mounstruo.mp3-e683ecb62d3104bfad89bdd7f0377eee.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sounds/Effects/Daño por mounstruo.mp3"
+dest_files=["res://.godot/imported/Daño por mounstruo.mp3-e683ecb62d3104bfad89bdd7f0377eee.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
