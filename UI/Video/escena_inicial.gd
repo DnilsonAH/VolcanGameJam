@@ -13,9 +13,4 @@ func _process(delta: float) -> void:
 		continuar_a_juego()
 
 func continuar_a_juego() -> void:
-	var game = get_node_or_null("/root/GAME")
-	if game:
-		game.siguiente_nivel = "mundo1"
-		game._verificar_nivel()
-	else:
-		print("⚠ No se encontró el nodo GAME.")
+	get_tree().change_scene_to_file("res://Main/game.tscn")

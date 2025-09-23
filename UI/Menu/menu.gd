@@ -9,7 +9,7 @@ func _ready() -> void:
 
 func _on_play_pressed() -> void:
 	# Carga el sistema de juego, no la escena jugable directamente
-	get_tree().change_scene_to_file("res://Main/game.tscn")
+	get_tree().change_scene_to_file("res://UI/Video/EscenaInicial.tscn")
 
 func _on_credits_pressed() -> void:
 	get_tree().change_scene_to_file("res://UI/Menu/Credits.tscn")

@@ -42,6 +42,44 @@ text = " · · · · · · · · · · CREDITS · · · · · · · · · ·
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel"]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 77.0
+offset_right = 586.0
+offset_bottom = 530.0
+text = "sfsdfsfd
+sdfsfd
+sdf
+sdf
+dfs
+fds
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+fdssdfsdfsd"
+
 [node name="regresar" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = 4
