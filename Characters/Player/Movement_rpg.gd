@@ -47,3 +47,10 @@ func animations(dx, dy):
 		animationPlayer.play("Idle")
 	else:
 		animationPlayer.play("Walk")
+
+
+func _on_area_2d_2_area_entered(area: Area2D) -> void:
+	if area.is_in_group("player"):
+		var game = get_tree().get_nodes_in_group("GAME")[0]
+		game.siguiente_nivel = "flashback"
+		game._verificar_nivel()

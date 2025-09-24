@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://dx1ixk5582gwc"]
+[gd_scene load_steps=17 format=3 uid="uid://dx1ixk5582gwc"]
 
 [ext_resource type="Texture2D" uid="uid://bty8r05pmqts2" path="res://Assets/Sprites/LibrarySprite/Fondo.jpg" id="1_42hwa"]
 [ext_resource type="PackedScene" uid="uid://dnhwdpnttghdm" path="res://Recursos/assets_libreria/libreros.tscn" id="2_17fer"]
@@ -24,6 +24,9 @@ size = Vector2(3840, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4lp84"]
 size = Vector2(3840, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5dbip"]
+size = Vector2(22, 119.5)
 
 [node name="derecha" type="Node2D"]
 
@@ -569,3 +572,12 @@ position = Vector2(604, -318)
 
 [node name="Fantasma3" parent="." instance=ExtResource("10_5dbip")]
 position = Vector2(1005, -1610)
+
+[node name="Area2D2" type="Area2D" parent="."]
+position = Vector2(1005, -1610)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2(1540, -263.75)
+shape = SubResource("RectangleShape2D_5dbip")
+
+[connection signal="area_entered" from="Area2D2" to="playerLibrary" method="_on_area_2d_2_area_entered"]

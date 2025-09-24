@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://b5i621u1nubrv"]
+[gd_scene load_steps=21 format=3 uid="uid://b5i621u1nubrv"]
 
 [ext_resource type="Texture2D" uid="uid://bty8r05pmqts2" path="res://Assets/Sprites/LibrarySprite/Fondo.jpg" id="1_5cuji"]
 [ext_resource type="Texture2D" uid="uid://58lreledsx56" path="res://Assets/Fondos/fondo suelo.png" id="1_h82mi"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://bdqwbq1vqoflo" path="res://Characters/Player/player_rpg.tscn" id="8_tcuki"]
 [ext_resource type="PackedScene" uid="uid://cr8jmtyhoamgr" path="res://Recursos/assets_libreria/mesa_N.tscn" id="11_u16ba"]
 [ext_resource type="PackedScene" uid="uid://dxt1n52j1psob" path="res://Characters/Melgar/mariano_melgar.tscn" id="12_hwsc6"]
+[ext_resource type="Texture2D" uid="uid://d3k0annqcoqxi" path="res://Assets/Fondos/flecha-removebg-preview.png" id="13_gfcr5"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_tcuki"]
 
@@ -178,6 +179,14 @@ shape = SubResource("RectangleShape2D_tisep")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="derecha/CollisionShape2D/StaticBody2D"]
 position = Vector2(3, 0)
 shape = SubResource("RectangleShape2D_6weah")
+
+[node name="TextureRect4" type="TextureRect" parent="."]
+offset_left = 35.0
+offset_top = 338.00003
+offset_right = 295.0
+offset_bottom = 618.0
+scale = Vector2(0.60368663, 0.54583335)
+texture = ExtResource("13_gfcr5")
 
 [connection signal="area_entered" from="Izquierda" to="." method="_on_izquierda_area_entered"]
 [connection signal="body_entered" from="Izquierda" to="." method="_on_izquierda_body_entered"]
